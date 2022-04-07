@@ -8,11 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="modal-wrapper">
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="container">
+                <div class="block-wrapper">
+                    <div class="side-content">
+                        <div class="search-menu-wrapper">
+                            <div class="menu" onclick="toggleMenu(this)">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                            <div class="search-input-wrapper">
+                                <input type="text" class="search__input" placeholder="Найти...">
+                            </div>
+                        </div>
+                        <div class="list-friends">
+                            <div class="test"></div>
+                            <div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div><div class="test"></div>
+                        </div>
+                    </div>
+                    <div class="main-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper" id="modal-wrapper" style="display: none">
         <div class="modal">
             <div class="modal__content">
                 <div class="modal__close-wrapper">
-                    <button class="modal__close">x</button>
+                    <button class="modal__close" id="modal__close">x</button>
                 </div>
                 <form action="#" class="auth-form">
                     <div class="auth-form__img">
@@ -37,18 +63,6 @@
             </div>
         </div>
     </div>
-
-
-    <form class="authorization" action="#" style="display: none">
-        <a href="#" class="close_popup">Х</a>
-        <div class="logo">
-            <img src="image/avatar.png" alt="">
-        </div>
-        <h3>Авторизация</h3>
-        <p class="text-center">Введите пожалуйста своё фио и ник для<br>дальнейшей авторизации</p>
-        <input class="input-text" type="text" id="input__name" placeholder="ФИО">
-        <input class="input-text" type="text" id="input__nickname" placeholder="Введите свой ник">
-        <button id="button__enter" class="btn">войти</button>
-    </form>
+    <script src="script.js"></script>
 </body>
 </html>

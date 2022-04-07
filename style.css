@@ -145,69 +145,85 @@ html{
 }
 /*authorization-bem*/
 
-
-/*authorization*/
-.authorization{
-    position: absolute;
-    height: 550px;
-    width: 516px;
-    background-color: #17212b;
-    color: #ffffff;
+/*main-content*/
+.content-wrapper{
+    min-height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #17212b;
+}
+.content{
+    flex: 1 1 auto;
+    background-color: #17212b;
+}
+.block-wrapper{
+    width: 100%;
+    display: flex;
+}
+.side-content{
+    display: flex;
+    flex-direction: column;
+    flex: 35%;
     align-items: center;
+    min-height: 100vh;
+    border-right: 1px solid #0e1621;
 }
-.authorization h3{
-    font-size: 2.4rem;
-    margin: 15px 0 15px 0;
+.main-content{
+    display: flex;
+    flex: 65%;
+    justify-content: center;
 }
-.authorization p{
-    font-size: 1.6rem;
-    margin-bottom: 40px;
-}
-.logo{
-    width: 136px;
-    height: 136px;
-    background-color: #242f3d;
-    border-radius: 50%;
+.search-menu-wrapper{
     display: flex;
     align-items: center;
-    margin: 0px 0 15px 0;
 }
-.logo img{
-    display: block;
-    margin: 0 auto;
+.search-input-wrapper{
+    margin-left: 10px;
 }
-.close_popup{
-    color: #ffffff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    font-size: 2rem;
-}
-.input-text{
-    border: none;
-    margin-bottom: 25px;
-    background-color: #17212b;
+.search__input{
+    width: 190px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #242f3d;
     caret-color: #ffffff;
-    width: 300px;
     padding-left: 8px;
-    border-bottom: 1px solid #465362;
-    color: #ffffff;
-    font-size: 1.6rem;
+    color: #a9a9a9;
 }
-.input-text:focus{
-    border-color: #5288c1;
+.search__input:focus{
+    color: white;
 }
-.btn{
-    width: 130px;
+.menu{
+    display: inline-block;
+    cursor: pointer
+}
+.bar1, .bar2, .bar3 {
+    width: 18px;
+    height: 2px;
+    background-color: #6c7883;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 3px);
+    transform: rotate(-45deg) translate(-4px, 3px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -4px);
+    transform: rotate(45deg) translate(-4px, -4px);
+}
+/*main-content*/
+
+.test{
     height: 40px;
-    border-radius: 8px;
-    background-color: #5288c1;
-    color: #ffffff;
-    margin-top: 15px;
-    font-size: 1.6rem;
+    background-color: white;
+    width: 250px;
+
 }
-/*authorization*/
