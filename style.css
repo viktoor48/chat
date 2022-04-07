@@ -42,6 +42,110 @@ html{
     text-align: center;
 }
 
+/*authorization-bem*/
+.modal-wrapper{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #09101a;
+    overflow: auto;
+}
+.modal{
+    max-width: 516px;
+    max-height: 550px;
+    width: 100%;
+}
+.modal__content{
+    /*max-width: 516px;*/
+    /*max-height: 550px;*/
+    /*width: 100%;*/
+    background-color: #17212b;
+}
+.modal__close-wrapper{
+    display: flex;
+    justify-content: right;
+    overflow: hidden;
+}
+.modal__close{
+    color: white;
+    background-color: #17212b;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 10px;
+    font-size: 2rem;
+}
+.auth-form__img{
+    width: 136px;
+    height: 136px;
+    background-color: #242f3d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 30px 0;
+}
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*padding: 0 100px 40px 100px;*/
+    padding-bottom: 40px;
+}
+.auth-form__title{
+    font-size: 2.4rem;
+    margin: 0px 0 15px 0;
+    color: white;
+}
+.auth-form__description{
+    color: #b6b2b2;
+    font-size: 1.6rem;
+    margin-bottom: 45px;
+}
+.auth-form__input-wrapper + .auth-form__input-wrapper{
+    margin-top: 25px;
+}
+.auth-form__input{
+    border: none;
+    /*margin-bottom: 25px;*/
+    background-color: #17212b;
+    caret-color: #ffffff;
+    width: 300px;
+    padding-left: 8px;
+    border-bottom: 1px solid #465362;
+    color: #858e97;
+    font-size: 1.6rem;
+}
+.auth-form__input:hover,
+.auth-form__input:focus{
+    border-color: #5288c1;
+    color: white;
+}
+.auth-form__btn-wrapper{
+    margin-top: 40px;
+}
+.auth-form__btn{
+    width: 130px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #5288c1;
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+.auth-form__btn:hover{
+    background-color:  #406B99;
+    transition: 0.3s ease;
+}
+/*authorization-bem*/
+
+
 /*authorization*/
 .authorization{
     position: absolute;
