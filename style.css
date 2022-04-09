@@ -178,14 +178,14 @@ html{
     flex: 65%;
     justify-content: center;
 }
-.search-menu-wrapper{
+.sidebar-header{
     display: flex;
     align-items: center;
 }
-.search-input-wrapper{
+.sidebar-header__input-search-wrapper{
     margin-left: 10px;
 }
-.search__input{
+.input-search{
     width: 190px;
     height: 32px;
     border-radius: 4px;
@@ -197,7 +197,7 @@ html{
 .search__input:focus{
     color: white;
 }
-.menu{
+.sidebar-header__btn-container{
     display: inline-block;
     cursor: pointer
 }
