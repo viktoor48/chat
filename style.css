@@ -246,7 +246,7 @@ html {
     background-color: #406B99;
 }
 .chat-list__chat + .chat-list__chat {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .avatar img{
     vertical-align: middle;
@@ -325,10 +325,6 @@ html {
     color: #ffffff;
 }
 
-.send-message-wrapper {
-
-}
-
 .send-message__button {
     height: 28px;
     width: 112px;
@@ -344,3 +340,52 @@ html {
     background-color: #4572A3;
 }
 /*block-messages*/
+
+/*modal-load-photo*/
+
+.modal-load-photo {
+    max-height: 220px;
+    max-width: 360px;
+    width: 100%;
+}
+
+.modal-load-photo__content {
+    background-color: #17212b;
+}
+
+.load-title {
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.wrapper-load-title {
+    padding-left: 20px;
+}
+
+.desc-user-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 35px 20px 20px 20px;
+}
+
+.avatar-user img{
+    vertical-align: middle;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+}
+
+.user-caption__name {
+    font-size: 1.8rem;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.user-caption__status {
+    font-size: 1.4rem;
+    line-height: 24px;
+    color: #4eace9;
+}
+/*modal-load-photo*/

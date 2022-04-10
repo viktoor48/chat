@@ -1,14 +1,14 @@
-const modal_wrapper = document.querySelector('#modal-wrapper');
+const modal_auth = document.querySelector('#modal-wrapper-auth');
 const modal__close = document.querySelector('#modal__close');
 
 
 modal__close.addEventListener('click', () => {
-    modal_wrapper.style.display = 'none';
+    modal_auth.style.display = 'none';
 });
 
 window.addEventListener('click', (e) => {
-    if (e.target == modal_wrapper) {
-        modal_wrapper.style.display = 'none';
+    if (e.target == modal_auth) {
+        modal_auth.style.display = 'none';
     }
 });
 
