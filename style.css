@@ -351,6 +351,7 @@ html {
 
 .modal-load-photo__content {
     background-color: #17212b;
+    border-radius: 6px;
 }
 
 .load-title {
