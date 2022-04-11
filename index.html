@@ -15,7 +15,7 @@
                     <div class="side-content">
                         <div class="sidebar-wrapper">
                             <div class="sidebar-header">
-                                <div class="sidebar-header__btn-container" onclick="toggleMenu(this)">
+                                <div class="sidebar-header__btn-container" id="btn_settings">
                                     <div class="bar1"></div>
                                     <div class="bar2"></div>
                                     <div class="bar3"></div>
@@ -162,7 +162,7 @@
             </div>
         </div>
     </div>
-    <div class="modal-wrapper" id="modal-load-photo">
+    <div class="modal-wrapper invisible" id="modal-load-photo">
         <div class="modal-load-photo">
             <div class="modal-load-photo__content">
                 <div class="modal__close-wrapper">
@@ -173,20 +173,39 @@
                 </div>
                 <div class="desc-user-wrapper">
                     <div class="avatar-user">
-                        <img src="image/1.png" alt="">
-                    </div>
-                    <div class="user-caption">
-                        <div class="user-caption__name-row">
-                            <span class="user-caption__name">Виктор</span>
+                        <div class="avatar-user-default" id="avatar-user-default">
+                            <input type="file" class="avatar-user-default__input" id="inputPhoto">
                         </div>
-                        <div class="user-caption__status-wrapper">
-                            <span class="user-caption__status">В сети</span>
+                        <img src="" class="avatar-user-custom invisible" id="avatar-user-custom" alt="">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-info__name-row">
+                            <span class="user-info__name">Виктор</span>
+                        </div>
+                        <div class="user-info__status-wrapper">
+                            <span class="user-info__status">В сети</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="model-photo-load modal-wrapper" id="model-photo-load">
+        <div class="photo-load-wrapper">
+            <div class="photo-load-content">
+                <div class="img-wrapper">
+                    <img src="image/1.png" id="" alt="">
+                    <div class="img-wrapper__circle"></div>
+                </div>
+                <p class="photo-load__title">Область для профильной фотографии</p>
+                <div class="btn-container">
+                    <div class="btn btn-cancel">ОТМЕНА</div>
+                    <div class="btn btn-save">СОХРАНИТЬ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
