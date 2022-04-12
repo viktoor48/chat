@@ -336,6 +336,10 @@ html {
     display: none;
 }
 
+.modal-photo-load {
+    display: none;
+}
+
 .modal-load-photo {
     max-height: 220px;
     max-width: 360px;
