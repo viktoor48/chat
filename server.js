@@ -23,10 +23,11 @@ server.listen(port, () => {
 io.on('connection', socket => {
     socket.name = uuid();
     //socket.emit('set username', socket.id);//отправляем сообщение конкретно этому сокету
-    socket.on('adduser', (name, nickname, img, user) => {
-        console.log('Новый user ' + name, nickname, img, socket.id);
+    socket.on('adduser', ( user ) => {
+        console.log('Новый user ' + user.name, user.nick, user.image, socket.id);
         user.socketID = socket.id;
         users.push(user);
+        updateClients();
         for (let user of users) {
             console.log(user.name, user.nick, user.image, user.socketID);
         }
@@ -42,6 +43,29 @@ io.on('connection', socket => {
         for (let user of users) {
             console.log('Пользователи после удаления ' + user.name, user.nick, user.image, user.socketID);
         }
+
+        updateClients();
+    })
+
+    socket.on('changeImage', (currentUser) => {
+        for (let user of users) {
+            if (currentUser.socketID == user.socketID) {
+                user.image = currentUser.image;
+            }
+        }
+
+        updateClients();
+    })
+
+    socket.on('chat message', (currentUser) => {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].socketID == currentUser.socketID) {
+                users[i].lastMes = currentUser.lastMes;
+            }
+        }
+
+        socket.emit('my message', currentUser);
+        socket.broadcast.emit('chat message', currentUser);
 
         updateClients();
     })

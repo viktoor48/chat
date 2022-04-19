@@ -275,6 +275,10 @@ html {
     font-size: 1.4rem;
     line-height: 24px;
 }
+
+.user-last-message {
+    white-space: nowrap;
+}
 /*chat-list*/
 
 /*block-messages*/
