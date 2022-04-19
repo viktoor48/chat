@@ -1,7 +1,11 @@
 {
-  "type": "module",
   "dependencies": {
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1",
     "uuid": "^8.3.2",
     "ws": "^8.5.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
   }
 }

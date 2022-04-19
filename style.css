@@ -212,37 +212,64 @@ html {
 /*chat-list*/
 .chat-list-wrapper {
     width: 100%;
+    flex: 1 1 auto;
+    position: relative;
 }
+
+.chat-absolute-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.chat-absolute-wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
 .chat-list {
     padding: 10px;
 }
+
 .chat-list__chat {
     display: flex;
     align-items: center;
     cursor: pointer;
     border-radius: 8px;
 }
+
 .chat-list__chat:hover,
 .chat-list__chat:focus {
     background-color: #406B99;
 }
+
 .chat-list__chat + .chat-list__chat {
     margin-top: 20px;
 }
+
 .avatar img{
     vertical-align: middle;
     width: 54px;
     height: 54px;
     border-radius: 50%;
 }
+
 .user-caption {
     margin-left: 10px;
 }
+
 .dialog-title span {
     color: #e0e1e3;
     font-size: 1.4rem;
     line-height: 24px;
 }
+
 .dialog-subtitle span {
     color: #718294;
     font-size: 1.4rem;
@@ -291,6 +318,9 @@ html {
     overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .messages-absolute-wrapper::-webkit-scrollbar {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Chat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,86 +26,75 @@
                             </div>
                         </div>
                         <div class="chat-list-wrapper">
-                            <ul class="chat-list">
-                                <li class="chat-list__chat">
-                                    <div class="avatar">
-                                        <img src="image/1.png" alt="">
-                                    </div>
-                                    <div class="user-caption">
-                                        <div class="dialog-title">
-                                            <span>Виктор</span>
+                            <div class="chat-absolute-wrapper">
+                                <ul class="chat-list">
+                                    <li class="chat-list__chat">
+                                        <div class="avatar">
+                                            <img src="image/1.png" alt="">
                                         </div>
-                                        <div class="dialog-subtitle">
-                                            <span class="user-last-message">Сообщение...</span>
+                                        <div class="user-caption">
+                                            <div class="dialog-title">
+                                                <span>Виктор</span>
+                                            </div>
+                                            <div class="dialog-subtitle">
+                                                <span class="user-last-message">Сообщение...</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="chat-list__chat">
-                                    <div class="avatar">
-                                        <img src="image/1.png" alt="">
-                                    </div>
-                                    <div class="user-caption">
-                                        <div class="dialog-title">
-                                            <span>Виктор</span>
+                                    </li>
+                                    <li class="chat-list__chat">
+                                        <div class="avatar">
+                                            <img src="image/1.png" alt="">
                                         </div>
-                                        <div class="dialog-subtitle">
-                                            <span class="user-last-message">Сообщение...</span>
+                                        <div class="user-caption">
+                                            <div class="dialog-title">
+                                                <span>Виктор</span>
+                                            </div>
+                                            <div class="dialog-subtitle">
+                                                <span class="user-last-message">Сообщение...</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="chat-list__chat">
-                                    <div class="avatar">
-                                        <img src="image/1.png" alt="">
-                                    </div>
-                                    <div class="user-caption">
-                                        <div class="dialog-title">
-                                            <span>Виктор</span>
+                                    </li>
+                                    <li class="chat-list__chat">
+                                        <div class="avatar">
+                                            <img src="image/1.png" alt="">
                                         </div>
-                                        <div class="dialog-subtitle">
-                                            <span class="user-last-message">Сообщение...</span>
+                                        <div class="user-caption">
+                                            <div class="dialog-title">
+                                                <span>Виктор</span>
+                                            </div>
+                                            <div class="dialog-subtitle">
+                                                <span class="user-last-message">Сообщение...</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="chat-list__chat">
-                                    <div class="avatar">
-                                        <img src="image/1.png" alt="">
-                                    </div>
-                                    <div class="user-caption">
-                                        <div class="dialog-title">
-                                            <span>Виктор</span>
+                                    </li>
+                                    <li class="chat-list__chat">
+                                        <div class="avatar">
+                                            <img src="image/1.png" alt="">
                                         </div>
-                                        <div class="dialog-subtitle">
-                                            <span class="user-last-message">Сообщение...</span>
+                                        <div class="user-caption">
+                                            <div class="dialog-title">
+                                                <span>Виктор</span>
+                                            </div>
+                                            <div class="dialog-subtitle">
+                                                <span class="user-last-message">Сообщение...</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="chat-list__chat">
-                                    <div class="avatar">
-                                        <img src="image/1.png" alt="">
-                                    </div>
-                                    <div class="user-caption">
-                                        <div class="dialog-title">
-                                            <span>Виктор</span>
+                                    </li>
+                                    <li class="chat-list__chat">
+                                        <div class="avatar">
+                                            <img src="image/1.png" alt="">
                                         </div>
-                                        <div class="dialog-subtitle">
-                                            <span class="user-last-message">Сообщение...</span>
+                                        <div class="user-caption">
+                                            <div class="dialog-title">
+                                                <span>Виктор</span>
+                                            </div>
+                                            <div class="dialog-subtitle">
+                                                <span class="user-last-message">Сообщение...</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="chat-list__chat">
-                                    <div class="avatar">
-                                        <img src="image/1.png" alt="">
-                                    </div>
-                                    <div class="user-caption">
-                                        <div class="dialog-title">
-                                            <span>Виктор</span>
-                                        </div>
-                                        <div class="dialog-subtitle">
-                                            <span class="user-last-message">Сообщение...</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="block-messages">
@@ -114,11 +103,11 @@
                                 <h4>Чат</h4>
                             </div>
                             <div class="block-messages__subtitle">
-                                <h3>2 участника</h3>
+                                <h3><span id="users-Online">2</span> участника</h3>
                             </div>
                         </div>
                         <div class="messages-container">
-                            <div class="messages-absolute-wrapper">
+                            <div class="messages-absolute-wrapper" id="chat-container">
                                 <div class="message-row message-row-right">
                                     <div class="message-row__text">
                                         <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid consequatur corporis delectus, dolorem.</p>
@@ -159,10 +148,10 @@
                         </div>
                         <div class="block-messages__footer">
                             <div class="new-message-wrapper">
-                                <input type="text" class="input-message" placeholder="Введите сообщение...">
+                                <input type="text" class="input-message" name="message" id="message" autocomplete="off" placeholder="Введите сообщение...">
                             </div>
                             <div class="send-message-wrapper">
-                                <button class="send-message__button">Отправить</button>
+                                <button class="send-message__button" id="send-message">Отправить</button>
                             </div>
                         </div>
                     </div>
@@ -170,7 +159,7 @@
             </div>
         </div>
     </div>
-    <div class="modal-wrapper" id="modal-wrapper-auth" style="display: none">
+    <div class="modal-wrapper" id="modal-wrapper-auth">
         <div class="modal">
             <div class="modal__content">
                 <div class="modal__close-wrapper">
@@ -178,18 +167,18 @@
                 </div>
                 <form action="#" class="auth-form" id="authForm">
                     <div class="auth-form__img">
-                        <img src="image/avatar.png" alt="">
+                        <img src="image/avatar.png" id="default-img" alt="">
                     </div>
 
                     <h2 class="auth-form__title">Авторизация</h2>
                     <div class="auth-form__description">Введите пожалуйста своё фио и ник для<br>дальнейшей авторизации</div>
 
                     <div class="auth-form__input-wrapper">
-                        <input type="text" class="auth-form__input" placeholder="ФИО">
+                        <input type="text" class="auth-form__input" name="name" placeholder="ФИО">
                     </div>
 
                     <div class="auth-form__input-wrapper">
-                        <input type="text" class="auth-form__input" placeholder="Введите свой ник">
+                        <input type="text" class="auth-form__input" name="nickname" placeholder="Введите свой ник">
                     </div>
 
                     <div class="auth-form__btn-wrapper">
@@ -217,7 +206,7 @@
                     </div>
                     <div class="user-info">
                         <div class="user-info__name-row">
-                            <span class="user-info__name">Виктор</span>
+                            <span class="user-info__name"></span>
                         </div>
                         <div class="user-info__status-wrapper">
                             <span class="user-info__status">В сети</span>
@@ -243,6 +232,8 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+<!--    <script src="client.js" type="module"></script>-->
+    <script src="./script.js"></script>
 </body>
 </html>
