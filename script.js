@@ -20,23 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const nickname = authForm.elements.nickname.value;
         const img = 'image/img_avatar_mes.png';
 
-        modalAuthForm.style.display = 'none';
-        userInfoName.textContent = name;
+        if(name && nickname) {
+            modalAuthForm.style.display = 'none';
+            userInfoName.textContent = name;
 
-        currentUser.name = name;
-        currentUser.nick = nickname;
-        currentUser.image = img;
-        currentUser.lastMes = 'Сообщение...';
-        currentUser.socketID = socket.id;
+            currentUser.name = name;
+            currentUser.nick = nickname;
+            currentUser.image = img;
+            currentUser.lastMes = 'Сообщение...';
+            currentUser.socketID = socket.id;
 
-        console.log('Current user ' + currentUser.name, currentUser.nick, currentUser.image, socket.id);
+            console.log('Current user ' + currentUser.name, currentUser.nick, currentUser.image, socket.id);
 
-        socket.emit('adduser', {
-            name: name,
-            nick: nickname,
-            image: img,
-            lastMes: 'Сообщение...'
-        });
+            socket.emit('adduser', {
+                name: name,
+                nick: nickname,
+                image: img,
+                lastMes: 'Сообщение...'
+            });
+        }
     }
 
     socket.on('update', (users) => {

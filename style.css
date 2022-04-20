@@ -324,12 +324,11 @@ html {
     scrollbar-width: none;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
 }
 
 .messages-absolute-wrapper::-webkit-scrollbar {
     width: 0;
-    /*height: 0;*/
 }
 
 .message-row {
