@@ -628,3 +628,33 @@ html {
     margin-right: 20px;
 }
 /*modal-load-photo*/
+
+/*@media (max-width: 800px) {*/
+/*    .side-content {*/
+/*        flex: 100%;*/
+/*        flex-shrink: 0;*/
+/*    }*/
+
+/*    .sidebar-header__input-search-wrapper {*/
+/*        flex: 100%;*/
+/*    }*/
+
+/*    .input-search {*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .block-messages {*/
+/*        flex: 100%;*/
+/*    }*/
+/*}*/
+
+@media (max-width: 850px) {
+    .block-messages {
+        flex: 100%;
+        flex-shrink: 0;
+    }
+
+    .side-content {
+        order: 1;
+    }
+}

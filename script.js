@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const socket = io();
 
-    let userList = [];
+    let usersList = [];
 
     const modalAuthForm = document.querySelector('#modal-wrapper-auth');
     const authForm = document.querySelector('#authForm');
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     socket.on('update', (users) => {
+        usersList = copyArray(users, usersList);
         const chatList = document.querySelector('.chat-list');
         chatList.innerHTML = '';
         console.log('update');
@@ -70,6 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         chatList.innerHTML += item;
         console.log('render');
+    }
+
+    function copyArray(array, copyArray) {
+        copyArray = JSON.parse(JSON.stringify(array));
+        return copyArray;
     }
 
     authForm.addEventListener('submit', sendForm);
@@ -139,6 +145,46 @@ document.addEventListener('DOMContentLoaded', () => {
             end = 'a'
         }
         usersOnline.textContent = `${count} участник${end}`
+    }
+
+    const filterNameInput = document.querySelector('#filter-input');
+
+    filterNameInput.addEventListener('keyup', () => {
+       renderUsers();
+    });
+
+    function renderUsers() {
+        if (usersList) {
+            const chatList = document.querySelector('.chat-list');
+            chatList.innerHTML = '';
+            let chunk = filterNameInput.value;
+
+            for (let user of usersList) {
+                if (isMatching(user.name, chunk)) {
+                    chatList.innerHTML += `<li class="chat-list__chat">
+                                        <div class="avatar">
+                                            <img src="${user.image}" alt="">
+                                        </div>
+                                        <div class="user-caption">
+                                            <div class="dialog-title">
+                                                <span>${user.name}</span>
+                                            </div>
+                                            <div class="dialog-subtitle">
+                                                <span class="user-last-message">${user.lastMes}</span>
+                                            </div>
+                                        </div>
+                                    </li>`;
+                }
+            }
+        }
+    }
+
+    function isMatching(full, chunk) {
+        if (full.toLowerCase().includes(chunk.toLowerCase())) {
+            return true
+        }
+
+        return false;
     }
 
     const modal_auth = document.querySelector('#modal-wrapper-auth');
