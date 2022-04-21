@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         usersList = copyArray(users, usersList);
         const chatList = document.querySelector('.chat-list');
         chatList.innerHTML = '';
-        console.log('update');
         countOnline = users.length;
         usersOnlineCount();
 
@@ -53,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderUsersOnline(user, chatList);
         }
     })
+
 
     function renderUsersOnline(user, chatList) {
         let item = `<li class="chat-list__chat">
@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </li>`;
 
         chatList.innerHTML += item;
-        console.log('render');
     }
 
     function copyArray(array, copyArray) {
@@ -261,6 +260,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-});
+    const chatList = document.querySelector('.chat-list');
+    chatList.addEventListener('click', clickOnUser);
 
+    const blockMes = document.querySelector('.block-messages');
+
+    function clickOnUser(event) {
+        if (!event.target.classList.contains('chat-list')) {
+            if (window.innerWidth <= 800) {
+                blockMes.classList.add('block-messages-small');
+            }
+        }
+    }
+
+    const btn_message_close = document.querySelector('.block-messages__close-button');
+
+    btn_message_close.addEventListener('click', () => {
+        blockMes.classList.remove('block-messages-small');
+    });
+});
 
