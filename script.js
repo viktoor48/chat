@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (isMatching(user.name, chunk)) {
                     chatList.innerHTML += `<li class="chat-list__chat">
                                         <div class="avatar">
-                                            <img src="${user.image}" alt="">
+                                            <img src="${user.image}">
                                         </div>
                                         <div class="user-caption">
                                             <div class="dialog-title">
@@ -185,11 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     }
 
-    const modal_auth = document.querySelector('#modal-wrapper-auth');
-    const modal_auth__close = document.querySelector('#modal__close');
-    const btn_settings = document.querySelector('#btn_settings');
-    const modal_load_photo = document.querySelector('#modal-load-photo');
-    const btn_load_close = document.querySelector('#btn_close_photo');
+    const modalAuth = document.querySelector('#modal-wrapper-auth');
+    const modalAuthClose = document.querySelector('#modal__close');
+    const btnSettings = document.querySelector('#btn_settings');
+    const modalLoadPhoto = document.querySelector('#modal-load-photo');
+    const btnLoadClose = document.querySelector('#btn_close_photo');
     const avatarUserCustom = document.querySelector('#avatar-user-custom');
     const avatarUserDefault = document.querySelector('#avatar-user-default');
     const modalPhotoLoad = document.querySelector('#modal-photo-load');
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnSave.addEventListener('click', () => {
         modalPhotoLoad.style.display = 'none';
-        modal_load_photo.classList.add('invisible');
+        modalLoadPhoto.classList.add('invisible');
     });
 
     btnCancel.addEventListener('click', () => {
@@ -211,21 +211,21 @@ document.addEventListener('DOMContentLoaded', () => {
         inputPhoto.value = '';
     });
 
-    btn_settings.addEventListener('click', () => {
-        modal_load_photo.classList.remove('invisible');
+    btnSettings.addEventListener('click', () => {
+        modalLoadPhoto.classList.remove('invisible');
     });
 
-    btn_load_close.addEventListener('click', () => {
-        modal_load_photo.classList.add('invisible');
+    btnLoadClose.addEventListener('click', () => {
+        modalLoadPhoto.classList.add('invisible');
     });
 
-    modal_auth__close.addEventListener('click', () => {
-        modal_auth.style.display = 'none';
+    modalAuthClose.addEventListener('click', () => {
+        modalAuth.style.display = 'none';
     });
 
     window.addEventListener('click', (e) => {
-        if (e.target == modal_auth__close) {
-            modal_auth.style.display = 'none';
+        if (e.target == modalAuthClose) {
+            modalAuth.style.display = 'none';
         }
     });
 

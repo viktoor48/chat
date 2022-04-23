@@ -1,7 +1,7 @@
 const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
-const { v4: uuid } = require('uuid');
+const {v4: uuid} = require('uuid');
 
 const app = express();
 const server = http.Server(app);
