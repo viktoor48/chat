@@ -42,7 +42,7 @@ html {
     text-align: center;
 }
 
-/*authorization-bem*/
+/*authorization*/
 .modal-wrapper {
     position: fixed;
     z-index: 1;
@@ -143,7 +143,7 @@ html {
     background-color:  #406B99;
     transition: 0.3s ease;
 }
-/*authorization-bem*/
+/*authorization*/
 
 /*main-content*/
 .content-wrapper {
@@ -291,9 +291,6 @@ html {
 .block-messages__header {
     min-height: 70px;
     display: flex;
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*padding-left: 10px;*/
 }
 
 .block-messages__close-wrapper {

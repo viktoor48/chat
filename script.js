@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const modalAuthForm = document.querySelector('#modal-wrapper-auth');
     const authForm = document.querySelector('#authForm');
-    const defaultImage = document.querySelector('#default-img');
     const usersOnline = document.querySelector('#users-Online');
 
     const userInfoName = document.querySelector('.user-info__name');

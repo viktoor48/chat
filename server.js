@@ -22,7 +22,7 @@ server.listen(port, () => {
 
 io.on('connection', socket => {
     socket.name = uuid();
-    //socket.emit('set username', socket.id);//отправляем сообщение конкретно этому сокету
+
     socket.on('adduser', ( user ) => {
         console.log('Новый user ' + user.name, user.nick, user.image, socket.id);
         user.socketID = socket.id;
