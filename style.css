@@ -280,6 +280,7 @@ html {
 
 .user-caption {
     margin-left: 10px;
+    min-width: 0;
 }
 
 .dialog-title span {
@@ -296,6 +297,10 @@ html {
 
 .user-last-message {
     white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 /*chat-list*/
 
